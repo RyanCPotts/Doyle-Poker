@@ -54,6 +54,21 @@
             }
         });
     </script>
+    
+    <script>
+    // Add event listener to the "Fold" list item
+    document.getElementById("fold").addEventListener("click", function() {
+        // Show a conditional prompt when "Fold" is clicked
+        var response = confirm("Do you have the best hand?");
+        
+        // Check the user's response
+        if (response) {
+            alert("You have the best hand!");
+        } else {
+            alert("FOLD");
+        }
+    });
+    </script>
 
 </body>
 </html>

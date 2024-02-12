@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wireframe Site</title>
-<link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
     <header>
         <h1 style="background-color: blue; color: white; text-align: center;">Poker</h1>
-
-
     </header>
+    
     <nav>
         <ul style="background-color: gray; overflow: hidden;">
             <li style="float: left;"><a href="#" style="color: white; font-weight: bold;">Home</a></li>
             <li style="float: right;"><a href="#" style="color: white; font-weight: bold;">About</a></li>
         </ul>
     </nav>
+
     <div class="container">
         <section style="text-align: center;">
-            DOYLE BRUNSON
-        </section>
-                </li>
-                <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON">
-            </section>    
-        </section>
+            <p>DOYLE BRUNSON</p>
+            <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON">
+        </section>    
+
         <section>
-            <p>Know when to hold'em. Know when to fold'em.
-                 </p>
+            <p>Know when to hold'em. Know when to fold'em.</p>
         </section>
+
         <section>
-<ul><a> - FOLD
-</ul></a>
-<ul><a> - CALL
-</ul></a>
-<ul><a> - RAISE
-</ul></a>
-<ul><a><b> - ALL IN
-</ul></b></a>
+            <ul>
+                <li><a href="#">- FOLD</a></li>
+                <li><a href="#">- CALL</a></li>
+                <li><a href="#">- RAISE</a></li>
+                <li><a href="#"><b>- ALL IN</b></a></li>
+            </ul>
         </section>
     </div>
+
     <footer>
         <p>Know when to walk away. Know when to run.</p>
     </footer>
@@ -56,9 +55,7 @@
                 alert("No worries! Poker is fun to learn.");
             }
         });
-    </script>
-    
-    <script>
+
         // Define the function to handle the "Fold" action
         function handleFold() {
             var response = confirm("Do you have the best hand?");
@@ -71,8 +68,7 @@
         }
     
         // Add event listener to the "Fold" list item
-        document.getElementById("fold").addEventListener("click", handleFold);
+        document.getElementById("- FOLD").addEventListener("click", handleFold);
     </script>
-
 </body>
 </html>

@@ -11,14 +11,14 @@
     </header>
     <nav>
         <ul style="background-color: gray">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <span><a href="#">Home</a></span>
+            <span><a href="#">About</a></span>
         </ul>
     </nav>
     <div class="container">
         <section>
             <section>
-                <img src="img.url" alt="ALRO">
+                <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON">
             </section>    
         </section>
         <section>
@@ -40,9 +40,20 @@
         <p>Know when to walk away. Know when to run.</p>
     </footer>
 
-<script>
-    //javascript
-</script>
+    <script>
+        // Show a conditional prompt when the webpage loads
+        window.addEventListener('DOMContentLoaded', function() {
+            // Ask the user if they've ever played poker
+            var response = confirm("Have you ever played poker?");
+            
+            // Check the user's response
+            if (response) {
+                alert("Great! Enjoy the game!");
+            } else {
+                alert("No worries! Poker is fun to learn.");
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <h1 style="background-color: blue; color: white; text-align: center;">Poker</h1>
+        <h1 img https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F540%2F904%2Foriginal%2Fpoker-banner-alphabet-sign-marquee-light-bulb-vintage-vector.jpg&tbnid=xn0SAmVtB663vM&vet=12ahUKEwjjyv-BlKWEAxX34skDHWjzCX0QMygKegUIARCOAQ..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F540904-poker-banner-alphabet-sign-marquee-light-bulb-vintage&docid=oEDZyZra0JsyyM&w=7821&h=3070&q=poker%20image%20banner&ved=2ahUKEwjjyv-BlKWEAxX34skDHWjzCX0QMygKegUIARCOAQ
+
     </header>
     
     <nav>
@@ -24,13 +25,13 @@
             <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON">
         </section>    
 
-        <section>
+        <section style="text-align: center; background-color: gray; overflow: hidden;">
             <p>Know when to hold'em. Know when to fold'em.</p>
         </section>
 
         <section>
             <ul>
-                <li><a href="#">- FOLD</a></li>
+                <li><a href="#" onclick="handleFold()">- FOLD</a></li>
                 <li><a href="#">- CALL</a></li>
                 <li><a href="#">- RAISE</a></li>
                 <li><a href="#"><b>- ALL IN</b></a></li>
@@ -38,10 +39,18 @@
         </section>
     </div>
 
-    <footer>
+    <footer style="text-align: center; background-color: gray; overflow: hidden;">
         <p>Know when to walk away. Know when to run.</p>
     </footer>
 
+    <script>
+            // Ask for the user's name using prompt
+            var name = prompt("What is your name?");
+            
+            // Display a greeting with the user's name
+            alert("Hello, " + name + "!");
+    </script>
+    
     <script>
         // Show a conditional prompt when the webpage loads
         window.addEventListener('DOMContentLoaded', function() {
@@ -57,7 +66,7 @@
         });
 
         // Define the function to handle the "Fold" action
-        function handleFold() {
+    <script>function handleFold() {
             var response = confirm("Do you have the best hand?");
             
             if (response) {

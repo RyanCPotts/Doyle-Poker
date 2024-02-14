@@ -36,8 +36,8 @@
             <ul>
                 <li><a href="#" id="fold" onclick="handleFold()">- FOLD</a></li>
                 <li><a href="#" id="call" onclick="handleCall()">- CALL</a></li>
-                <li><a href="#">- RAISE</a></li>
-                <li><a href="#"><b>- ALL IN</b></a></li>
+                <li><a href="#" id="raise" onclick="handlRaise()">- RAISE</a></li>
+                <li><a href="#" id="all-in" onclick="handleCall()">- ALL IN</a></li>
             </ul>
         </section>
     </div>
@@ -86,8 +86,33 @@
                 alert("RAISE!");
             } else {
                 alert("FOLD!");
-            }
+            }id="call" onclick="handleCall()">- CALL</a></li>
         }
+
+
+
+    // Define the function to handle the "raise" action
+    function handleRaise() {
+    var response = confirm("Are you nearly certain that you have the best hand?);
+    console.log('response', response)
+    if (response) {
+        alert("ALL IN!");
+    } else {
+        alert("FOLD!");
+    }id="call" onclick="handleCall()">- CALL</a></li>
+}
+
+// Define the function to handle the "all-in" action
+function handleAll-In() {
+    var response = confirm("Are you 100% positive that you have the best hand?);
+    console.log('response', response)
+    if (response) {
+        alert("ALL IN!");
+    } else {
+        alert("Be very careful.");
+    }id="call" onclick="handleCall()">- CALL</a></li>
+
+
 </script>
 
 </body>

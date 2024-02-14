@@ -110,6 +110,25 @@
         }
     </script>
 
+<script>
+    // Prompt the user to enter the number of times to display the image
+    var numCards = prompt("How many cards do you want to draw?");
+    
+    // Convert the user's input to a number
+    numCards = parseInt(numCards);
+    
+    // Check if the input is a valid number
+    if (isNaN(numCards) || numCards <= 0) {
+        alert("Standing pat!.");
+    } else {
+        // Loop to display the image the specified number of times
+        for (var i = 0; i < numCards; i++) {
+            document.write('<img src="path_to_your_image.jpg" alt="Card">');
+            document.write('<br>'); // Add a line break after each image
+        }
+    }
+</script>
+
 </body>
 
 </html>

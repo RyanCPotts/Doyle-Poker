@@ -15,7 +15,7 @@
     <nav>
         <ul style="background-color: gray; overflow: hidden;">
             <li style="float: left;"><a href="#" style="color: white; font-weight: bold;">Home</a></li>
-            <li style="float: right;"><a href="#" style="color: white; font-weight: bold;">About</a></li>
+            <li style="float: right;"><a href="#" style="color: white; font-weight: bold;">[About(https://en.wikipedia.org/wiki/Poker)</a></li>
         </ul>
     </nav>
 
@@ -31,7 +31,7 @@
 
         <section>
             <ul>
-                <li><a href="#" onclick="handleFold()">- FOLD</a></li>
+                <li><a href="#" id="fold" onclick="handleFold()">- FOLD</a></li>
                 <li><a href="#">- CALL</a></li>
                 <li><a href="#">- RAISE</a></li>
                 <li><a href="#"><b>- ALL IN</b></a></li>
@@ -64,11 +64,13 @@
                 alert("No worries! Poker is fun to learn.");
             }
         });
+    </script>
+    
 
         // Define the function to handle the "Fold" action
     <script>function handleFold() {
             var response = confirm("Do you have the best hand?");
-            
+            console.log('response', response)
             if (response) {
                 alert("You have the best hand!");
             } else {
@@ -77,7 +79,7 @@
         }
     
         // Add event listener to the "Fold" list item
-        document.getElementById("- FOLD").addEventListener("click", handleFold);
+        document.getElementById("fold").addEventListener("click", handleFold);
     </script>
 </body>
 </html>

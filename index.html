@@ -45,14 +45,12 @@
         <p><b>Know when to walk away. Know when to run.</b></p>
     </section>
         
-<script>
-
+    <script>
         // Prompt the user for their name
         var name = prompt("What is your name?");
         
         // Log the name to the console
         console.log("Hello, " + name + "!");
-    
         
         // Show a conditional prompt when the webpage loads
         window.addEventListener('DOMContentLoaded', function() {
@@ -66,54 +64,51 @@
                 alert("No worries, " + name + "! Poker is fun to learn.");
             }
         });
-
+    
         // Define the function to handle the "fold" action
         function handleFold() {
             var response = confirm("Do you have the best hand?");
-            console.log('response', response)
+            console.log('response', response);
             if (response) {
                 alert("You have the best hand!");
             } else {
                 alert("FOLD!");
             }
         }
-
+    
         // Define the function to handle the "call" action
         function handleCall() {
             var response = confirm("Do you think your hand is better than average?");
-            console.log('response', response)
+            console.log('response', response);
             if (response) {
                 alert("RAISE!");
             } else {
                 alert("FOLD!");
-            }id="call" onclick="handleCall()">- CALL</a></li>
+            }
         }
-
-
-
-    // Define the function to handle the "raise" action
-    function handleRaise() {
-    var response = confirm("Are you nearly certain that you have the best hand?);
-    console.log('response', response)
-    if (response) {
-        alert("ALL IN!");
-    } else {
-        alert("FOLD!");
-    }id="call" onclick="handleCall()">- CALL</a></li>
-}
-
-// Define the function to handle the "all-in" action
-function handleAll-In() {
-    var response = confirm("Are you 100% positive that you have the best hand?);
-    console.log('response', response)
-    if (response) {
-        alert("ALL IN!");
-    } else {
-        alert("Be very careful.");
-    }id="call" onclick="handleCall()">- CALL</a></li>
-
-
-</script>
+    
+        // Define the function to handle the "raise" action
+        function handleRaise() {
+            var response = confirm("Are you nearly certain that you have the best hand?");
+            console.log('response', response);
+            if (response) {
+                alert("RAISE!");
+            } else {
+                alert("FOLD!");
+            }
+        }
+    
+        // Define the function to handle the "all-in" action
+        function handleAllIn() {
+            var response = confirm("Are you 100% positive that you have the best hand?");
+            console.log('response', response);
+            if (response) {
+                alert("ALL IN!");
+            } else {
+                alert("Be very careful.");
+            }
+        }
+    </script>
 
 </body>
 

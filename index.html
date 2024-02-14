@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="style.css">  
 </head>
 <body>
-    <header>
-        <h1 img https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F540%2F904%2Foriginal%2Fpoker-banner-alphabet-sign-marquee-light-bulb-vintage-vector.jpg&tbnid=xn0SAmVtB663vM&vet=12ahUKEwjjyv-BlKWEAxX34skDHWjzCX0QMygKegUIARCOAQ..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F540904-poker-banner-alphabet-sign-marquee-light-bulb-vintage&docid=oEDZyZra0JsyyM&w=7821&h=3070&q=poker%20image%20banner&ved=2ahUKEwjjyv-BlKWEAxX34skDHWjzCX0QMygKegUIARCOAQ
 
+    <header style="background-color: blue; text-align: center;">        
+        <h1>Poker</h1>
     </header>
     
     <nav>
         <ul style="background-color: gray; overflow: hidden;">
             <li style="float: left;"><a href="#" style="color: white; font-weight: bold;">Home</a></li>
-            <li style="float: right;"><a href="#" style="color: white; font-weight: bold;">[About(https://en.wikipedia.org/wiki/Poker)</a></li>
+            <li style="float: right;">
+                <a href="https://en.wikipedia.org/wiki/Poker" style="color: white; font-weight: bold;">About</a>
+            </li>
         </ul>
     </nav>
 
@@ -32,25 +34,13 @@
         <section>
             <ul>
                 <li><a href="#" id="fold" onclick="handleFold()">- FOLD</a></li>
-                <li><a href="#">- CALL</a></li>
+                <li><a href="#" id="call" onclick="handleCall()">- CALL</a></li>
                 <li><a href="#">- RAISE</a></li>
                 <li><a href="#"><b>- ALL IN</b></a></li>
             </ul>
         </section>
     </div>
 
-    <footer style="text-align: center; background-color: gray; overflow: hidden;">
-        <p>Know when to walk away. Know when to run.</p>
-    </footer>
-
-    <script>
-            // Ask for the user's name using prompt
-            var name = prompt("What is your name?");
-            
-            // Display a greeting with the user's name
-            alert("Hello, " + name + "!");
-    </script>
-    
     <script>
         // Show a conditional prompt when the webpage loads
         window.addEventListener('DOMContentLoaded', function() {
@@ -64,22 +54,29 @@
                 alert("No worries! Poker is fun to learn.");
             }
         });
-    </script>
-    
 
-        // Define the function to handle the "Fold" action
-    <script>function handleFold() {
+        // Define the function to handle the "fold" action
+        function handleFold() {
             var response = confirm("Do you have the best hand?");
             console.log('response', response)
             if (response) {
                 alert("You have the best hand!");
             } else {
-                alert("FOLD");
+                alert("FOLD!");
             }
         }
-    
-        // Add event listener to the "Fold" list item
-        document.getElementById("fold").addEventListener("click", handleFold);
+
+        // Define the function to handle the "call" action
+        function handleCall() {
+            var response = confirm("Do you think your hand is better than average?");
+            console.log('response', response)
+            if (response) {
+                alert("RAISE!");
+            } else {
+                alert("FOLD!");
+            }
+        }
     </script>
 </body>
+
 </html>

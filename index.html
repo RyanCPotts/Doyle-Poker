@@ -56,7 +56,7 @@
         // Show a conditional prompt when the webpage loads
         window.addEventListener('DOMContentLoaded', function() {
             // Ask the user if they've ever played poker
-            var response = confirm("Have you ever played poker?");
+            var response = confirm("Have you ever played poker," + name + "?");
             
             // Check the user's response
             if (response) {

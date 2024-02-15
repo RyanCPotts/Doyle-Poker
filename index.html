@@ -43,23 +43,7 @@
     </div>
 
     <div id="imageContainer" style="display: inline;">
-        <script>
-            // Prompt the user to enter the number of times to display the image
-            var numCards = prompt("How many cards do you want to draw?");
-            
-            // Convert the user's input to a number
-            numCards = parseInt(numCards);
-            
-            // Check if the input is a valid number
-            if (isNaN(numCards) || numCards <= 0) {
-                alert("Standing pat!.");
-            } else {
-                // Loop to display the image the specified number of times
-                for (var i = 0; i < numCards; i++) {
-                    document.write('<img src="https://dejpknyizje2n.cloudfront.net/marketplace/products/35568e8161034e6a9c1d71704ff96846.png" alt="Card">');
-                }
-            }
-        </script>
+        
     </div>
     <section style="text-align: center; background-color: gray; overflow: hidden;">
         <p><b>Know when to walk away. Know when to run.</b></p>
@@ -130,6 +114,26 @@
         }
     
     </script>
+    
+    <script>
+            // Prompt the user to enter the number of times to display the image
+            var numCards = prompt("How many cards do you want to draw?");
+            
+            // Convert the user's input to a number
+            numCards = parseInt(numCards);
+            
+            // Check if the input is a valid number
+            if (isNaN(numCards) || numCards <= 0) {
+                alert("Standing pat!.");
+            } else {
+                // Loop to display the image the specified number of times
+                for (var i = 0; i < numCards; i++) {
+                    document.write('<img src="https://dejpknyizje2n.cloudfront.net/marketplace/products/35568e8161034e6a9c1d71704ff96846.png" alt="Card">');
+                }
+            }
+        </script>
+
+
 
 
 <!-- <script>

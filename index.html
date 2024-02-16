@@ -32,12 +32,13 @@
             <p><b>Know when to hold'em. Know when to fold'em.</b></p>
         </section>
 
-        <section>
-            <ul>
-                <li><a href="#" id="fold" onclick="handleFold()">- FOLD</a></li>
-                <li><a href="#" id="call" onclick="handleCall()">- CALL</a></li>
-                <li><a href="#" id="raise" onclick="handleRaise()">- RAISE</a></li>
-                <li><a href="#" id="all-in" onclick="handleAllIn()">- ALL IN</a></li>
+        <section style="display: flex; justify-content: space-between;">
+            <ul style="list-style-type: none; padding: 0;">
+                <p> What do you do now? Choose from the below options.</p>
+                <li style="flex: 1; text-align: center;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
+                <li style="flex: 1; text-align: center;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
+                <li style="flex: 1; text-align: center;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
+                <li style="flex: 1; text-align: center;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
             </ul>
         </section>
     </div>

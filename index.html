@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wireframe Site</title>
-    <link rel="stylesheet" href="style.css">  
-</head>
-<body>
+    <head>
+        <style>
+            #instruction {
+                font-size: 30px; /* Adjust the font size as needed */
+            }
+        </style>
+    </head>
+    <body>
+        <section style="display: flex; flex-direction: column; align-items: center;">
+            <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
+            <br>
+            <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
+                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
+            </ul>
+        </section>
+    </body>
 
     <header style="background-color: blue; text-align: center;">        
         <h1>Poker</h1>
     </header>
-    
+<!-- Navigation bar-->
     <nav>
-        <ul style="background-color: gray; overflow: hidden;">
-            <li style="float: left;">
-                <a href="https://ryancpotts.github.io/about-me-1/" style="color: white; font-weight: bold; width: 66%">Home</a></li>
+        <ul style="background-color: gray; overflow: hidden; padding: 0; margin: 0; list-style-type: none;">
+            <li style="float: left; margin-right: 20px;">
+                <a href="https://ryancpotts.github.io/about-me-1/" style="color: white; font-weight: bold; width: auto; padding: 200px;">Home</a>
+            </li>
             <li style="float: right;">
-                <a href="https://en.wikipedia.org/wiki/Poker" style="color: white; font-weight: bold; width: 66%">About</a>
+                <a href="https://en.wikipedia.org/wiki/Poker" style="color: white; font-weight: bold; width: auto; padding: 200px;">About</a>
             </li>
         </ul>
     </nav>
@@ -31,9 +44,12 @@
         <section style="text-align: center; background-color: gray; overflow: hidden;">
             <p><b>Know when to hold'em. Know when to fold'em.</b></p>
         </section>
-
+<!-- Container for FOLD, CALL, RAISE, ALL IN-->
         <section style="display: flex; flex-direction: column; align-items: center;">
-            <b><p>What do you do now? Choose from the below options.</p></b>
+            <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
+        #instruction {
+                font-size: 20px; /* Adjust the font size as needed */
+            }
             <br>
             <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
                 <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>

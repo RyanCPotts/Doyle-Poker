@@ -7,170 +7,101 @@
         #instruction {
             font-size: 30px; /* Adjust the font size as needed */
         }
-    </style>
-    <style>
-        body {background-color: whitesmoke; color: white;}
+        body {
+            background-color: whitesmoke;
+            color: black;
+        }
+        header {
+            background-color: black;
+            text-align: center;
+        }
     </style>
 </head>
+<body>
 
-</html>
-    <header style="background-color: black; text-align: center;">        
-        <h1>Poker</h1>
-    </header>
+<header>        
+    <h1>Poker</h1>
+</header>
+
 <!-- Navigation bar-->
-    <nav>
-        <ul style="background-color: gray; overflow: hidden; padding: 0; margin: 0; list-style-type: none;">
-            <li style="float: left; margin-right: 20px;">
-                <a href="https://ryancpotts.github.io/about-me-1/" style="color: white; font-weight: bold; width: auto; padding: 200px;">Home</a>
-            </li>
-            <li style="float: right;">
-                <a href="https://en.wikipedia.org/wiki/Poker" style="color: white; font-weight: bold; width: auto; padding: 200px;">About</a>
-            </li>
-        </ul>
-    </nav>
+<nav>
+    <ul style="background-color: gray; overflow: hidden; padding: 0; margin: 0; list-style-type: none;">
+        <li style="float: left; margin-right: 20px;">
+            <a href="https://ryancpotts.github.io/about-me-1/" style="color: white; font-weight: bold; width: auto; padding: 200px;">Home</a>
+        </li>
+        <li style="float: right;">
+            <a href="https://en.wikipedia.org/wiki/Poker" style="color: white; font-weight: bold; width: auto; padding: 200px;">About</a>
+        </li>
+    </ul>
+</nav>
 
-    <div class="container">
-        <section style="text-align: center; color: black;">
-            <p>DOYLE BRUNSON</p>
-            <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON" style="width: 33%;">
-        </section>    
+<div class="container">
+    <section style="text-align: center; color: black;">
+        <p>DOYLE BRUNSON</p>
+        <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON" style="width: 33%;">
+    </section>    
 
-        <section style="text-align: center; background-color: gray; overflow: hidden;">
-            <p><b>Know when to hold'em. Know when to fold'em.</b></p>
-        </section>
-<!-- Container for FOLD, CALL, RAISE, ALL IN-->
-        <br>
-        <section style="display: flex; flex-direction: column; align-items: center;">
-            <b><p id="instruction" style="color: black;">What do you do now? Choose from the below options.</p></b>
-            <br>
-            <br>
-            <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
-                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 22px; font-weight: bold;">FOLD</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 22px; font-weight: bold;">CALL</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 22px; font-weight: bold;">RAISE</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 22px; font-weight: bold;">ALL IN</a></li>
-            <br>
-            <br>
-            <br>
-            </ul>
-        </section>
-    </div>
-
-    <div id="imageContainer" style="display: inline;">
-        
-    </div>
     <section style="text-align: center; background-color: gray; overflow: hidden;">
-        <p><b>Know when to walk away. Know when to run.</b></p>
+        <p><b>Know when to hold'em. Know when to fold'em.</b></p>
     </section>
-        
+    
+    <!-- Container for FOLD, CALL, RAISE, ALL IN-->
+    <section style="display: flex; flex-direction: column; align-items: center;">
+        <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
+        <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
+            <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 22px; font-weight: bold;">FOLD</a></li>
+            <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 22px; font-weight: bold;">CALL</a></li>
+            <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 22px; font-weight: bold;">RAISE</a></li>
+            <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 22px; font-weight: bold;">ALL IN</a></li>
+        </ul>
+    </section>
+</div>
+
+<div id="imageContainer" style="display: inline;">
+    <!-- You can add content here if needed -->
+</div>
+
+<section style="text-align: center; background-color: gray; overflow: hidden;">
+    <p><b>Know when to walk away. Know when to run.</b></p>
+</section>
+    
 <script>
-        // Prompt the user for their name
-        var name = prompt("What is your name?");
+    // Prompt the user for their name
+    var name = prompt("What is your name?");
+    
+    // Log the name to the console
+    console.log("Hello, " + name + "!");
+    
+    // Show a conditional prompt when the webpage loads
+    window.addEventListener('DOMContentLoaded', function() {
+        // Ask the user if they've ever played poker
+        var response = confirm("Have you ever played poker, " + name + "?");
         
-        // Log the name to the console
-        console.log("Hello, " + name + "!");
-        
-        // Show a conditional prompt when the webpage loads
-        window.addEventListener('DOMContentLoaded', function() {
-            // Ask the user if they've ever played poker
-            var response = confirm("Have you ever played poker, " + name + "?");
-            
-            // Check the user's response
-            if (response) {
-                alert("Great! Enjoy the game, " + name + "!");
-            } else {
-                alert("No worries, " + name + "! Poker is fun to learn.");
-            }
-        });
-    
-        // Define the function to handle the "fold" action
-        function handleFold() {
-            var response = confirm("Do you have the best hand?");
-            console.log('response', response);
-            if (response) {
-                alert("BET!");
-            } else {
-                alert("FOLD!");
-            }
+        // Check the user's response
+        if (response) {
+            alert("Great! Enjoy the game, " + name + "!");
+        } else {
+            alert("No worries, " + name + "! Poker is fun to learn.");
         }
-    
-        // Define the function to handle the "call" action
-        function handleCall() {
-            var response = confirm("Do you think your hand is good enough to stick around to see what happens?");
-            console.log('response', response);
-            if (response) {
-                alert("CALL!");
-            } else {
-                alert("FOLD!");
-            }
-        }
-    
-        // Define the function to handle the "raise" action
-        function handleRaise() {
-            var response = confirm("Are you nearly certain that you have the best hand?");
-            console.log('response', response);
-            if (response) {
-                alert("RAISE!");
-            } else {
-                alert("Slow down and see what the other guy does first.");
-            }
-        }
-    
-        // Define the function to handle the "all-in" action
-        function handleAllIn() {
-            var response = confirm("Are you 100% positive that you have the best hand?");
-            console.log('response', response);
-            if (response) {
-                alert("ALL IN!");
-            } else {
-                alert("Be very careful.");
-            }
-        }
-    
-    </script>
-    
-    <script>
-            // Prompt the user to enter the number of times to display the image
-            var numCards = prompt("How many cards do you want to draw?");
-            
-            // Convert the user's input to a number
-            numCards = parseInt(numCards);
-            
-            // Check if the input is a valid number
-            if (isNaN(numCards) || numCards <= 0) {
-                alert("Standing pat!.");
-            } else {
-                // Loop to display the image the specified number of times
-                for (var i = 0; i < numCards; i++) {
-                    document.write('<img src="https://dejpknyizje2n.cloudfront.net/marketplace/products/35568e8161034e6a9c1d71704ff96846.png" alt="Card">');
-                }
-            }
-        </script>
+    });
 
-
-
-
-<!-- <script>
-    
-    
-    // FOR LOOP DRAWING CARDS Prompt the user to enter the number of times to display the image
-    var numCards = prompt("How many cards do you want to draw?");
-    
-    // Convert the user's input to a number
-    numCards = parseInt(numCards);
-    
-    // Check if the input is a valid number
-    if (isNaN(numCards) || numCards <= 0) {
-        alert("Standing pat!.");
-    } else {
-        // Loop to display the image the specified number of times
-        for (var i = 0; i < numCards; i++) {
-            document.write('<img src="https://dejpknyizje2n.cloudfront.net/marketplace/products/35568e8161034e6a9c1d71704ff96846.png" alt="Card">');
-            document.write('<br>'); // Add a line break after each image
+    // Define the function to handle the "fold" action
+    function handleFold() {
+        var response = confirm("Do you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("BET!");
+        } else {
+            alert("FOLD!");
         }
     }
-</script> -->
 
-</body>
-
-</html>
+    // Define the function to handle the "call" action
+    function handleCall() {
+        var response = confirm("Do you think your hand is good enough to stick around to see what happens?");
+        console.log('response', response);
+        if (response) {
+            alert("CALL!");
+        } else {
+            alert("FOLD!");
+        }

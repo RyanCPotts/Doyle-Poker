@@ -32,13 +32,14 @@
             <p><b>Know when to hold'em. Know when to fold'em.</b></p>
         </section>
 
-        <section style="display: flex; justify-content: space-between;">
-            <ul style="list-style-type: none; padding: 0;">
-                <li style="flex: 1; text-align: center;">What do you do now? Choose from the below options.</li>
-                <li style="flex: 1; text-align: center;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
-                <li style="flex: 1; text-align: center;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
-                <li style="flex: 1; text-align: center;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
-                <li style="flex: 1; text-align: center;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
+        <section style="display: flex; flex-direction: column; align-items: center;">
+            <b><p>What do you do now? Choose from the below options.</p></b>
+            <br>
+            <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
+                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
             </ul>
         </section>
     </div>

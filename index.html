@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            #instruction {
-                font-size: 30px; /* Adjust the font size as needed */
-            }
-        </style>
-    </head>
-    <body>
-        <section style="display: flex; flex-direction: column; align-items: center;">
-            <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
-            <br>
-            <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
-                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
-            </ul>
-        </section>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the Document</title>
+    <style>
+        #instruction {
+            font-size: 30px; /* Adjust the font size as needed */
+        }
+    </style>
+    <style>
+        body {background-color: whitesmoke; color: white;}
+    </style>
+</head>
 
-    <header style="background-color: blue; text-align: center;">        
+</html>
+    <header style="background-color: black; text-align: center;">        
         <h1>Poker</h1>
     </header>
 <!-- Navigation bar-->
@@ -36,26 +30,28 @@
     </nav>
 
     <div class="container">
-        <section style="text-align: center;">
+        <section style="text-align: center; color: black;">
             <p>DOYLE BRUNSON</p>
-            <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON">
+            <img src="https://www.historyforsale.com/productimages/large/274151.jpg" alt="DOYLE BRUNSON" style="width: 33%;">
         </section>    
 
         <section style="text-align: center; background-color: gray; overflow: hidden;">
             <p><b>Know when to hold'em. Know when to fold'em.</b></p>
         </section>
 <!-- Container for FOLD, CALL, RAISE, ALL IN-->
+        <br>
         <section style="display: flex; flex-direction: column; align-items: center;">
-            <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
-        #instruction {
-                font-size: 20px; /* Adjust the font size as needed */
-            }
+            <b><p id="instruction" style="color: black;">What do you do now? Choose from the below options.</p></b>
+            <br>
             <br>
             <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
-                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 18px; font-weight: bold;">FOLD</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 18px; font-weight: bold;">CALL</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 18px; font-weight: bold;">RAISE</a></li>
-                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 18px; font-weight: bold;">ALL IN</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 22px; font-weight: bold;">FOLD</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 22px; font-weight: bold;">CALL</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 22px; font-weight: bold;">RAISE</a></li>
+                <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 22px; font-weight: bold;">ALL IN</a></li>
+            <br>
+            <br>
+            <br>
             </ul>
         </section>
     </div>

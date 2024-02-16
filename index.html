@@ -7,19 +7,14 @@
         #instruction {
             font-size: 30px; /* Adjust the font size as needed */
         }
-        body {
-            background-color: whitesmoke;
-            color: black;
-        }
-        header {
-            background-color: black;
-            text-align: center;
-        }
+    </style>
+    <style>
+        body {background-color: whitesmoke; color: white;}
     </style>
 </head>
 <body>
 
-<header>        
+<header style="background-color: black; text-align: center;">        
     <h1>Poker</h1>
 </header>
 
@@ -44,64 +39,85 @@
     <section style="text-align: center; background-color: gray; overflow: hidden;">
         <p><b>Know when to hold'em. Know when to fold'em.</b></p>
     </section>
-    
-    <!-- Container for FOLD, CALL, RAISE, ALL IN-->
+
+    <!-- Shuffle Button -->
+    <br>
+    <section style="text-align: center;">
+        <button onclick="dealCards()" style="background-color: green; color: white; font-size: 24px; padding: 10px 20px;">SHUFFLE UP AND DEAL!</button>
+    </section>
+
+    <!-- Container for displaying cards -->
+    <div id="cardContainer" style="text-align: center; margin-top: 20px;"></div>
+
+    <!-- What do you do now? -->
     <section style="display: flex; flex-direction: column; align-items: center;">
-        <b><p id="instruction">What do you do now? Choose from the below options.</p></b>
+        <b><p id="instruction" style="color: black;">What do you do now? Choose from the below options.</p></b>
+        <br>
+        <br>
         <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center; width: 100%;">
             <li style="text-align: center; flex: 1;"><a href="#" id="fold" onclick="handleFold()" style="font-size: 22px; font-weight: bold;">FOLD</a></li>
             <li style="text-align: center; flex: 1;"><a href="#" id="call" onclick="handleCall()" style="font-size: 22px; font-weight: bold;">CALL</a></li>
             <li style="text-align: center; flex: 1;"><a href="#" id="raise" onclick="handleRaise()" style="font-size: 22px; font-weight: bold;">RAISE</a></li>
             <li style="text-align: center; flex: 1;"><a href="#" id="all-in" onclick="handleAllIn()" style="font-size: 22px; font-weight: bold;">ALL IN</a></li>
         </ul>
+        <br>
+        <br>
+        <br>
     </section>
 </div>
 
-<div id="imageContainer" style="display: inline;">
-    <!-- You can add content here if needed -->
-</div>
-
-<section style="text-align: center; background-color: gray; overflow: hidden;">
-    <p><b>Know when to walk away. Know when to run.</b></p>
-</section>
-    
 <script>
-    // Prompt the user for their name
-    var name = prompt("What is your name?");
-    
-    // Log the name to the console
-    console.log("Hello, " + name + "!");
-    
-    // Show a conditional prompt when the webpage loads
-    window.addEventListener('DOMContentLoaded', function() {
-        // Ask the user if they've ever played poker
-        var response = confirm("Have you ever played poker, " + name + "?");
+    function dealCards() {
+        // Array of unicode representations of playing cards
+        var cards = ['🂡', '🂱', '🃁', '🃑', '🂢', '🂲', '🃂', '🃒', '🂣', '🂳', '🃃', '🃓', '🂤', '🂴', '🃄', '🃔', '🂥', '🂵', '🃅', '🃕', '🂦', '🂶', '🃆', '🃖', '🂧', '🂷', '🃇', '🃗', '🂨', '🂸', '🃈', '🃘', '🂩', '🂹', '🃉', '🃙', '🂪', '🂺', '🃊', '🃚', '🂫', '🂻', '🃋', '🃛', '🂭', '🂽', '🃍', '🃝', '🂮'];
         
-        // Check the user's response
-        if (response) {
-            alert("Great! Enjoy the game, " + name + "!");
-        } else {
-            alert("No worries, " + name + "! Poker is fun to learn.");
-        }
-    });
+        // Select the card container
+        var cardContainer = document.getElementById("cardContainer");
 
-    // Define the function to handle the "fold" action
-    function handleFold() {
-        var response = confirm("Do you have the best hand?");
-        console.log('response', response);
-        if (response) {
-            alert("BET!");
-        } else {
-            alert("FOLD!");
+        // Clear previous cards
+        cardContainer.innerHTML = "";
+
+        // Shuffle the cards
+        cards = shuffle(cards);
+
+        // Display the first 5 cards
+        for (var i = 0; i < 5; i++) {
+            var cardElement = document.createElement("span");
+            cardElement.textContent = cards[i];
+            cardElement.style.fontSize = "216px"; // Set font size to make the card 3x larger
+            cardElement.style.color = "red"; // Set color to red
+            cardContainer.appendChild(cardElement);
         }
     }
 
-    // Define the function to handle the "call" action
-    function handleCall() {
-        var response = confirm("Do you think your hand is good enough to stick around to see what happens?");
-        console.log('response', response);
-        if (response) {
-            alert("CALL!");
-        } else {
-            alert("FOLD!");
+    // Function to shuffle an array
+    function shuffle(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
+        return array;
+    }
+
+    // Function placeholders for fold, call, raise, all in
+    function handleFold() {
+        // Implement functionality for fold
+    }
+
+    function handleCall() {
+        // Implement functionality for call
+    }
+
+    function handleRaise() {
+        // Implement functionality for raise
+    }
+
+    function handleAllIn() {
+        // Implement functionality for all in
+    }
+</script>
+
+</body>
+</html>

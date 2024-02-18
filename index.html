@@ -43,7 +43,7 @@
     <!-- Shuffle Button -->
     <br>
     <section style="text-align: center;">
-        <button onclick="dealCards()" style="background-color: green; color: white; font-size: 24px; padding: 10px 20px;">SHUFFLE UP AND DEAL!</button>
+        <button onclick="dealCards()" id="shuffleButton" style="background-color: green; color: white; font-size: 24px; padding: 10px 20px;">SHUFFLE UP AND DEAL!</button>
     </section>
 
     <!-- Container for displaying cards -->
@@ -70,7 +70,7 @@
     function dealCards() {
         // Array of unicode representations of playing cards
         var cards = ['🂡', '🂱', '🃁', '🃑', '🂢', '🂲', '🃂', '🃒', '🂣', '🂳', '🃃', '🃓', '🂤', '🂴', '🃄', '🃔', '🂥', '🂵', '🃅', '🃕', '🂦', '🂶', '🃆', '🃖', '🂧', '🂷', '🃇', '🃗', '🂨', '🂸', '🃈', '🃘', '🂩', '🂹', '🃉', '🃙', '🂪', '🂺', '🃊', '🃚', '🂫', '🂻', '🃋', '🃛', '🂭', '🂽', '🃍', '🃝', '🂮'];
-        
+
         // Select the card container
         var cardContainer = document.getElementById("cardContainer");
 
@@ -84,38 +84,57 @@
         for (var i = 0; i < 5; i++) {
             var cardElement = document.createElement("span");
             cardElement.textContent = cards[i];
-            cardElement.style.fontSize = "216px"; // Set font size to make the card 3x larger
+            cardElement.style.fontSize = "216px"; // Set font size to make the card 3x bigger
             cardElement.style.color = "red"; // Set color to red
             cardContainer.appendChild(cardElement);
         }
+
+        // Update instruction
+        var instruction = document.getElementById("instruction");
+        instruction.textContent = "What do you do now? Choose from the below options.";
     }
 
-    // Function to shuffle an array
-    function shuffle(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-        return array;
-    }
-
-    // Function placeholders for fold, call, raise, all in
     function handleFold() {
-        // Implement functionality for fold
+        var confirmFold = window.confirm("Are you sure you want to fold?");
+        if (confirmFold) {
+            var instruction = document.getElementById("instruction");
+            instruction.textContent = "You folded. Better luck next time!";
+        }
     }
 
     function handleCall() {
-        // Implement functionality for call
+        var instruction = document.getElementById("instruction");
+        instruction.textContent = "You called. Let's see what happens next!";
     }
 
     function handleRaise() {
-        // Implement functionality for raise
+        var instruction = document.getElementById("instruction");
+        instruction.textContent = "You raised. Keep the pressure up!";
     }
 
     function handleAllIn() {
-        // Implement functionality for all in
+        var instruction = document.getElementById("instruction");
+        instruction.textContent = "You went all in! High stakes!";
+    }
+
+    // Shuffle function
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
     }
 </script>
 

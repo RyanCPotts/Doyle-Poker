@@ -67,87 +67,72 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("fold").addEventListener("click", handleFold);
-        document.getElementById("call").addEventListener("click", handleCall);
-        document.getElementById("raise").addEventListener("click", handleRaise);
-        document.getElementById("all-in").addEventListener("click", handleAllIn);
+    // Prompt the user for their name
+    var name = prompt("What is your name?");
+    
+    // Log the name to the console
+    console.log("Hello, " + name + "!");
+    
+    // Show a conditional prompt when the webpage loads
+    window.addEventListener('DOMContentLoaded', function() {
+        // Ask the user if they've ever played poker
+        var response = confirm("Have you ever played poker, " + name + "?");
+        
+        // Check the user's response
+        if (response) {
+            alert("Great! Enjoy the game, " + name + "!");
+        } else {
+            alert("No worries, " + name + "! Poker is fun to learn.");
+        }
     });
 
-    function dealCards() {
-        // Array of unicode representations of playing cards
-        var cards = ['🂡', '🂱', '🃁', '🃑', '🂢', '🂲', '🃂', '🃒', '🂣', '🂳', '🃃', '🃓', '🂤', '🂴', '🃄', '🃔', '🂥', '🂵', '🃅', '🃕', '🂦', '🂶', '🃆', '🃖', '🂧', '🂷', '🃇', '🃗', '🂨', '🂸', '🃈', '🃘', '🂩', '🂹', '🃉', '🃙', '🂪', '🂺', '🃊', '🃚', '🂫', '🂻', '🃋', '🃛', '🂭', '🂽', '🃍', '🃝', '🂮'];
-
-        // Select the card container
-        var cardContainer = document.getElementById("cardContainer");
-
-        // Clear previous cards
-        cardContainer.innerHTML = "";
-
-        // Shuffle the cards
-        cards = shuffle(cards);
-
-        // Display the first 5 cards
-        for (var i = 0; i < 5; i++) {
-            var cardElement = document.createElement("span");
-            cardElement.textContent = cards[i];
-            cardElement.style.fontSize = "216px"; // Set font size to make the card 3x bigger
-            cardElement.style.color = "red"; // Set color to red
-            cardContainer.appendChild(cardElement);
-        }
-
-        // Update instruction
-        var instruction = document.getElementById("instruction");
-        instruction.textContent = "What do you do now? Choose from the below options.";
-    }
-
+    // Define the function to handle the "fold" action
     function handleFold() {
-        var confirmFold = window.confirm("Are you sure you want to fold?");
-        if (confirmFold) {
-            var instruction = document.getElementById("instruction");
-            instruction.textContent = "You folded. Better luck next time!";
-            console.log("User chose to fold.");
+        var response = confirm("Do you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("BET!");
+        } else {
+            alert("FOLD!");
         }
     }
 
+    // Define the function to handle the "call" action
     function handleCall() {
-        var instruction = document.getElementById("instruction");
-        instruction.textContent = "You called. Let's see what happens next!";
-        console.log("User chose to call.");
-    }
-
-    function handleRaise() {
-        var instruction = document.getElementById("instruction");
-        instruction.textContent = "You raised. Keep the pressure up!";
-        console.log("User chose to raise.");
-    }
-
-    function handleAllIn() {
-        var instruction = document.getElementById("instruction");
-        instruction.textContent = "You went all in! High stakes!";
-        console.log("User chose to go all in.");
-    }
-
-    // Shuffle function
-    function shuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
-
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-
-            // And swap it with the current element.
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
+        var response = confirm("Do you think your hand is good enough to stick around to see what happens?");
+        console.log('response', response);
+        if (response) {
+            alert("CALL!");
+        } else {
+            alert("FOLD!");
         }
-
-        return array;
     }
+
+    // Define the function to handle the "raise" action
+    function handleRaise() {
+        var response = confirm("Are you nearly certain that you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("RAISE!");
+        } else {
+            alert("Slow down and see what the other guy does first.");
+        }
+    }
+
+    // Define the function to handle the "all-in" action
+    function handleAllIn() {
+        var response = confirm("Are you 100% positive that you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("ALL IN!");
+        } else {
+            alert("Be very careful.");
+        }
+    }
+
 </script>
+
+<script>
 
 </body>
 </html>

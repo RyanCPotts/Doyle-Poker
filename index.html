@@ -67,6 +67,13 @@
 </div>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("fold").addEventListener("click", handleFold);
+        document.getElementById("call").addEventListener("click", handleCall);
+        document.getElementById("raise").addEventListener("click", handleRaise);
+        document.getElementById("all-in").addEventListener("click", handleAllIn);
+    });
+
     function dealCards() {
         // Array of unicode representations of playing cards
         var cards = ['🂡', '🂱', '🃁', '🃑', '🂢', '🂲', '🃂', '🃒', '🂣', '🂳', '🃃', '🃓', '🂤', '🂴', '🃄', '🃔', '🂥', '🂵', '🃅', '🃕', '🂦', '🂶', '🃆', '🃖', '🂧', '🂷', '🃇', '🃗', '🂨', '🂸', '🃈', '🃘', '🂩', '🂹', '🃉', '🃙', '🂪', '🂺', '🃊', '🃚', '🂫', '🂻', '🃋', '🃛', '🂭', '🂽', '🃍', '🃝', '🂮'];
@@ -99,22 +106,26 @@
         if (confirmFold) {
             var instruction = document.getElementById("instruction");
             instruction.textContent = "You folded. Better luck next time!";
+            console.log("User chose to fold.");
         }
     }
 
     function handleCall() {
         var instruction = document.getElementById("instruction");
         instruction.textContent = "You called. Let's see what happens next!";
+        console.log("User chose to call.");
     }
 
     function handleRaise() {
         var instruction = document.getElementById("instruction");
         instruction.textContent = "You raised. Keep the pressure up!";
+        console.log("User chose to raise.");
     }
 
     function handleAllIn() {
         var instruction = document.getElementById("instruction");
         instruction.textContent = "You went all in! High stakes!";
+        console.log("User chose to go all in.");
     }
 
     // Shuffle function

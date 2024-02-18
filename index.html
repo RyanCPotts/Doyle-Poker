@@ -7,6 +7,17 @@
         #instruction {
             font-size: 30px; /* Adjust the font size as needed */
         }
+        .card {
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            font-size: 32px;
+            width: 100px;
+            height: 150px;
+            text-align: center;
+        }
     </style>
     <style>
         body {background-color: whitesmoke; color: white;}
@@ -93,13 +104,60 @@
 
         // Display the first 5 cards
         for (var i = 0; i < 5; i++) {
-            var cardElement = document.createElement("span");
+            var cardElement = document.createElement("div");
             cardElement.textContent = deck[i];
-            cardElement.style.fontSize = "24px"; // Set font size
+            cardElement.classList.add("card");
             cardContainer.appendChild(cardElement);
+        }
+
+        // Log the dealt cards to console
+        console.log("Dealt cards:", deck.slice(0, 5));
+    }
+
+    // Define the function to handle the "fold" action
+    function handleFold() {
+        var response = confirm("Do you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("BET!");
+        } else {
+            alert("FOLD!");
         }
     }
 
+    // Define the function to handle the "call" action
+    function handleCall() {
+        var response = confirm("Do you think your hand is good enough to stick around to see what happens?");
+        console.log('response', response);
+        if (response) {
+            alert("CALL!");
+        } else {
+            alert("FOLD!");
+        }
+    }
+
+    // Define the function to handle the "raise" action
+    function handleRaise() {
+        var response = confirm("Are you nearly certain that you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("RAISE!");
+        } else {
+            alert("Slow down and see what the other guy does first.");
+        }
+    }
+
+    // Define the function to handle the "all-in" action
+    function handleAllIn() {
+        var response = confirm("Are you 100% positive that you have the best hand?");
+        console.log('response', response);
+        if (response) {
+            alert("ALL IN!");
+        } else {
+            alert("Be very careful.");
+        }
+    }
+    
     // Shuffle function
     function shuffle(array) {
         var currentIndex = array.length, temporaryValue, randomIndex;
